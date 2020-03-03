@@ -1,0 +1,199 @@
+// @import "../common/vars"
+// @import "../../components/blog-main/blog-main"
+// @import "../../components/blog-sidebar/blog-sidebar"
+
+// .blog
+//   padding: 130px 0
+//   .container
+//     display: flex
+//     justify-content: space-between
+//   &-list
+//     flex-basis: 750px
+//   &-item
+//     display: flex
+//     justify-content: space-between
+//     align-items: center
+//     padding: 40px 40px 40px 390px
+//     border-radius: 5px
+//     box-shadow: 0 0 76px 0 $shadow-color
+//     overflow: hidden
+//     margin-bottom: 50px
+//     position: relative
+//     &__img
+//       height: 100%
+//       width: 360px
+//       overflow: hidden
+//       margin-right: 30px
+//       position: absolute
+//       top: 0
+//       left: 0
+//       img
+//         width: auto
+//         height: 100%
+//     &__title
+//       display: block
+//       font-size: 18px
+//       font-weight: 500
+//       color: $dark-color
+//       margin-bottom: 25px
+//       transition: 0.3s
+//       &:hover
+//         color: $active-color
+//     &__info
+//       display: flex
+//       justify-content: space-between
+//       align-items: center
+//       margin-bottom: 40px
+//       font-size: 16px
+//       color: lighten($faint-dark-color, 10)
+//     &__icon
+//       display: inline-block
+//       vertical-align: middle
+//       width: 18px
+//       margin-right: 10px
+//     &__text
+//       font-size: 16px
+//       color: $faint-dark-color
+//       margin-bottom: 40px
+//     &__link
+//       display: flex
+//       align-items: center
+//       font-size: 16px
+//       font-weight: 500
+//       color: $dark-color
+//       transition: 0.3s
+//       &:hover
+//         color: $active-color
+//         .blog-item__arrow, .blog-item__arrow:before, .blog-item__arrow:after
+//           background-color: $active-color
+//       .blog-item__arrow, .blog-item__arrow:before, .blog-item__arrow:after
+//         content: ''
+//         display: block
+//         width: 16px
+//         height: 2px
+//         background-color: $dark-color
+//         margin-left: 10px
+//         transition: 0.3s
+//       .blog-item__arrow:before
+//         width: 8px
+//         transform-origin: bottom right
+//         transform: translateX(-1px) translateY(-1px) rotate(-45deg)
+//       .blog-item__arrow:after
+//         width: 8px
+//         transform-origin: top right
+//         transform: translateX(-1px) translateY(-1px) rotate(45deg)
+//   &-pagination
+//     display: flex
+//     &__btn
+//       padding: 12px 15px
+//       background-color: $active-color
+//       font-size: 22px
+//       font-weight: 500
+//       color: $main-color
+//       transition: 0.3s
+//       &:first-child
+//         border-top-left-radius: 3px
+//         border-bottom-left-radius: 3px
+//       &:last-child
+//         border-top-right-radius: 3px
+//         border-bottom-right-radius: 3px
+//       .blog-pagination__btn_next, .blog-pagination__btn_next:before
+//         content: ''
+//         display: block
+//         width: 10px
+//         height: 2px
+//         background-color: $main-color
+//         transform-origin: center right
+//       .blog-pagination__btn_next
+//         transform: rotate(45deg)
+//       .blog-pagination__btn_next:before
+//         transform: rotate(-90deg)
+//     .blog-pagination__btn_active, .blog-pagination__btn:hover
+//       background-color: $main-color
+//       color: $active-color
+//     &__arrow
+//       display: flex
+//       justify-content: center
+//       align-items: center
+//       &:hover
+//         .blog-pagination__btn_next, .blog-pagination__btn_next:before
+//           background-color: $active-color
+
+// @media(max-width: 1200px)
+//   .blog
+//     &-list
+//       flex-basis: 620px
+//     &-item
+//       padding: 20px 20px 20px 280px
+//       margin-bottom: 30px
+//       &__img
+//         width: 260px
+//         margin-right: 20px
+// @media(max-width: 992px)
+//   html
+//     .blog
+//       padding: 70px 0
+//       overflow: hidden
+//       .container
+//         display: block
+//         position: relative
+//       &-item
+//         padding: 20px 20px 20px 280px
+//         margin-bottom: 30px
+//         &__img
+//           width: 260px
+//           margin-right: 20px
+//         &__title:hover
+//           color: $dark-color
+//         &__link:hover
+//           color: $dark-color
+//           .blog-item__arrow, .blog-item__arrow:before, .blog-item__arrow:after
+//             background-color: $dark-color
+//       .blog-pagination
+//         &__btn:hover
+//           background-color: $active-color
+//           color: $main-color
+//         &__arrow:hover
+//           .blog-pagination__btn_next, .blog-pagination__btn_next:before
+//             background-color: $main-color
+// @media(max-width: 768px)
+//   html body
+//     .blog
+//       &-item
+//         padding: 10px 10px 10px 170px
+//         &__img
+//           width: 150px
+//         &__title
+//           font-size: 14px
+//           margin-bottom: 15px
+//         &__info
+//           font-size: 12px
+//           margin-bottom: 20px
+//         &__icon
+//           width: 14px
+//           margin-right: 5px
+//         &__text
+//           font-size: 14px
+//           margin-bottom: 20px
+//         &__link
+//           font-size: 14px
+//       &-pagination
+//         &__btn
+//           padding: 5px 8px
+//           font-size: 16px
+// @media(max-width: 576px)
+//   html body .blog
+//     .blog
+//       &-item
+//         padding-left: 110px
+//         &__img
+//           width: 100px
+//         &__title
+//           margin-bottom: 10px
+//         &__info
+//           margin-bottom: 10px
+//         &__icon
+//           width: 10px
+//         &__text
+//           font-size: 12px
+//           margin-bottom: 10px

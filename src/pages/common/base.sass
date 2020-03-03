@@ -1,0 +1,122 @@
+@import "./vars"
+@import "./reset"
+@import "../../components/header/header"
+@import "../../components/footer/footer"
+
+// Common
+body
+  background-color: $c-bg
+// *, div
+body, *
+  font-family: $font
+a
+  color: $c-dark
+
+// .container
+//   width: $w-xl
+//   margin: 0 auto
+// .logo a
+//   font-size: 36px
+//   font-weight: bold
+//   color: $active-color
+// .btn
+//   display: inline-block
+//   padding: 15px 35px
+//   background-color: $active-color
+//   border: 2px solid $active-color
+//   border-radius: 30px
+//   font-size: 16px
+//   font-weight: bold
+//   text-align: center
+//   text-transform: uppercase
+//   color: $light-color
+//   transition: 0.3s
+//   &:hover
+//     background-color: transparent
+//     color: $active-color
+//   &-up
+//     display: flex
+//     justify-content: center
+//     align-items: center
+//     width: 45px
+//     height: 45px
+//     border-radius: 5px
+//     background-color: $active-color
+//     position: fixed
+//     bottom: 25px
+//     right: 25px
+//     transition: 0.3s
+//     .btn-up__arrow, .btn-up__arrow:before, .btn-up__arrow:after
+//       content: ''
+//       display: block
+//       width: 2px
+//       height: 24px
+//       background-color: $main-color
+//       position: absolute
+//       top: 50%
+//       left: 50%
+//       margin-top: -12px
+//       margin-left: -1px
+//       transition: 0.3s
+//     .btn-up__arrow:before
+//       height: 12px
+//       transform-origin: top center
+//       transform: rotate(45deg)
+//     .btn-up__arrow:after
+//       height: 12px
+//       transform-origin: top center
+//       transform: translateX(-0.5px) rotate(-45deg)
+//     &:hover
+//       transform: rotate(45deg)
+//       .btn-up__arrow
+//         transform: rotate(-45deg)
+
+// @media(max-width: 1200px)
+//   .container
+//     width: $l
+// @media(max-width: 992px)
+//   html
+//     .container
+//         width: $m
+//     .logo a
+//       font-size: 28px
+//     .btn
+//       padding: 10px 25px
+//       font-size: 14px
+//       &:hover
+//         background-color: $active-color
+//         color: $light-color
+//       &-up
+//         width: 30px
+//         height: 30px
+//         border-radius: 3px
+//         bottom: 10px
+//         right: 10px
+//         .btn-up__arrow, .btn-up__arrow:before, .btn-up__arrow:after
+//           width: 1px
+//           height: 12px
+//           margin-top: -6px
+//           margin-left: -0.5px
+//         .btn-up__arrow:before
+//           height: 6px
+//         .btn-up__arrow:after
+//           height: 6px
+//         &:hover
+//           transform: rotate(0)
+//           .btn-up__arrow
+//             transform: rotate(0)
+// @media(max-width: 768px)
+//   html body
+//     .container
+//       width: $s
+//     .logo a
+//       font-size: 20px
+//     .btn
+//       font-size: 12px
+// @media(max-width: 576px)
+//   html body
+//     .container
+//       width: $xs
+//     .btn
+//       padding: 5px 15px
+//       font-size: 10px

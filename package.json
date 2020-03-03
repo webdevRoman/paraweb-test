@@ -1,0 +1,53 @@
+{
+  "name": "smartworld__test1",
+  "version": "1.0.0",
+  "description": "The first test task for the traineeship in the company Smart World.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --env development",
+    "build": "webpack --env production --mode=production",
+    "server": "static build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webdevRoman/smartWorld__test1.git"
+  },
+  "author": "Roman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webdevRoman/smartWorld__test1/issues"
+  },
+  "homepage": "https://github.com/webdevRoman/smartWorld__test1#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "autoprefixer": "^9.7.1",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "node-static": "^0.7.11",
+    "postcss-loader": "^3.0.0",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "jshintConfig": {
+    "esversion": 6,
+    "asi": true
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ]
+}
