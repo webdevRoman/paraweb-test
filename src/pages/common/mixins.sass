@@ -1,0 +1,16 @@
+// @function rem($pixels, $context: $mainFontSize)
+//   @if (unitless($pixels))
+//     $pixels: $pixels * 1px
+//   @if (unitless($context))
+//     $context: $context * 1px
+//   @return $pixels / $context * 1rem
+
+@function columns-width($cols, $size)
+  @if ($size == 4)
+    @return $cols * 100px - 30px
+  @if ($size == 3)
+    @return $cols * 85px - 30px
+  @if ($size == 2)
+    @return $cols * 65px - 30px
+  @if ($size == 1)
+    @return $cols * 85px - 30px
