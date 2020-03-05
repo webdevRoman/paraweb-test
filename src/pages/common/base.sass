@@ -1,6 +1,5 @@
 @import "./vars"
 @import "./reset"
-@import "../../components/header/header"
 @import "../../components/footer/footer"
 
 // Common
@@ -13,10 +12,12 @@ a
   color: $c-font-dark
 
 .container
-  display: flex
-  justify-content: space-between
   width: $w-xl
   margin: 0 auto
+  &-grid
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    grid-column-gap: 30px
 .logo
   &_square
     width: 105px

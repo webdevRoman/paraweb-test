@@ -1,152 +1,62 @@
 @import "../../pages/common/vars"
 
-// .header
-//   display: flex
-//   justify-content: center
-//   align-items: center
-//   background-color: $light-color
-//   padding: 25px 0
-//   border-bottom: 1px solid #dcdcdc
-//   .logo
-//     margin-right: 50px
-//   .container-header
-//     width: 1140px
-//     display: flex
-//     justify-content: flex-end
-//     align-items: center
-//   .menu
-//     display: flex
-//     justify-content: space-between
-//     align-items: center
-//     &-item
-//       margin-right: 40px
-//       &:last-child
-//         margin-right: 0
-//       a
-//         font-size: 16px
-//         font-weight: 500
-//         color: $faint-dark-color
-//         text-transform: uppercase
-//         transition: 0.3s
-//         &:hover
-//           color: $active-color
-//       &_active a
-//         color: $active-color
-//       &__pages
-//         font-size: 16px
-//         font-weight: 500
-//         color: $faint-dark-color
-//         text-transform: uppercase
-//         cursor: pointer
-//         transition: 0.3s
-//         &:hover
-//           color: $active-color
-//           position: relative
-//           .submenu
-//             display: flex
-//     .submenu
-//       display: none
-//       flex-direction: column
-//       align-items: center
-//       position: absolute
-//       top: 100%
-//       left: 50%
-//       margin-left: -65px
-//       width: 130px
-//       padding: 10px
-//       background-color: $main-color
-//       box-shadow: 0 0 20px 0 rgba(#000, 0.3)
-//       a
-//         font-size: 16px
-//         font-weight: 500
-//         color: $faint-dark-color
-//         text-transform: uppercase
-//         margin-bottom: 15px
-//         transition: 0.3s
-//         &:last-child
-//           margin-bottom: 0
-//         &:hover
-//           color: $active-color
-//   &-btn
-//     margin-left: 50px
-
-// @media(max-width: 1510px)
-//   html .header
-//     .logo
-//       margin-right: 20px
-//       a
-//         font-size: 32px
-//     &-btn
-//       padding: 10px 15px
-//       font-size: 14px
-//       margin-left: 20px
-// @media(max-width: 1400px)
-//   html .header
-//     .container-header
-//       width: 960px
-//     .logo
-//       margin-right: 30px
-//       a
-//         font-size: 36px
-//     &-btn
-//       padding: 15px 45px
-//       font-size: 16px
-//       margin-left: 30px
-// @media(max-width: 1310px)
-//   html body .header
-//     .container-header
-//       width: 800px
-// @media(max-width: 1200px)
-//   html body .header
-//     .container-header
-//       width: 640px
-// @media(max-width: 992px)
-//   html header.header
-//     .container-header
-//       width: 450px
-//     .menu
-//       &-item
-//         margin-right: 20px
-//         a
-//           &:hover
-//             color: $faint-dark-color
-//         &__pages
-//           .submenu a
-//             &:hover
-//               color: $faint-dark-color
-//           &:hover
-//             color: $faint-dark-color
-//     .header-btn
-//       margin-left: 20px
-// @media(max-width: 768px)
-//   html body .header
-//     .container-header
-//       width: 295px
-//     .menu
-//       &-item
-//         margin-right: 10px
-//         a
-//           font-size: 14px
-//         &__pages
-//           font-size: 14px
-//           div
-//             margin-bottom: -1px
-// @media(max-width: 576px)
-//   html body .header
-//     padding: 10px 0
-//     .container-header
-//       width: 250px
-//       padding: 0 10px
-//       justify-content: flex-start
-//     .logo
-//       display: none
-//     .menu
-//       &-item
-//         a
-//           font-size: 12px
-//         &__pages
-//           font-size: 12px
-//           margin-bottom: -1px
-//     .header-btn
-//       padding: 5px 10px
-//       margin-left: 0
+.notification
+  padding: 20px
+  background-color: $c-warning
+  transition: 0.2s
+  &-container
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-text
+    font-size: 16px
+    color: $c-font-light
+  &-btn
+    padding: 12px 25px
+    border: 1px solid $c-bg-light
+    font-size: 16px
+    color: $c-font-light
+    transition: 0.2s
+    &:hover
+      border: 1px solid darken($c-bg-light, 20)
+      font-size: 16px
+      color: darken($c-bg-light, 20)
+.header
+  padding: 14px 0
+  background-color: $c-bg-dark
+  &-container
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-language
+    font-size: 18px
+    color: $c-font-light
+  &-secondary
+    width: 300px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__link
+      font-size: 18px
+      color: $c-font-light
+      text-decoration: underline
+    &__buttons
+      width: 70px
+      display: flex
+      justify-content: space-between
+      align-items: center
+  &-btn
+    width: 22px
+    transition: 0.2s
+    &:hover
+      color: $c-active
+      svg path
+        fill: $c-active
+    &:last-child
+      &:hover
+        svg
+          path
+            fill: none
+            stroke: $c-active
+    svg path
+      transition: 0.2s

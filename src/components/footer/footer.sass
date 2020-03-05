@@ -1,30 +1,27 @@
 @import "../../pages/common/vars"
-@import "../../pages/common/mixins"
 
 .footer
   padding: 60px 0 196px 0
   background-color: $c-bg-dark
   color: $c-font-light
   &-logo
-    flex-basis: columns-width(2, 4)
-    margin-right: 30px
+    grid-column: span 2
   &-menu
-    display: flex
-    justify-content: space-between
-    flex-basis: columns-width(10, 4)
+    grid-column: span 10
+    display: grid
+    grid-template-columns: repeat(10, 1fr)
+    grid-column-gap: 30px
     padding-bottom: 40px
     border-bottom: 1px solid rgba($c-bg-light, 0.1)
     &_bold
-      flex-basis: columns-width(4, 4)
-      margin-right: 30px
+      grid-column: span 4
     &_thin
-      display: flex
-      justify-content: space-between
-      flex-basis: columns-width(6, 4)
+      grid-column: span 6
+      display: grid
+      grid-template-columns: repeat(6, 1fr)
+      grid-column-gap: 30px
     &__column
-      flex-basis: columns-width(3, 4)
-      &:first-child
-        margin-right: 30px
+      grid-column: span 3
     &__item
       display: block
       font-size: 18px
