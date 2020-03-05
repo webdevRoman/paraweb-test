@@ -4,20 +4,74 @@ extends ../base
 
 block main
   include ../../components/header-index/header-index
-  .main Hello World!!!
-  //- .blog
-  //-   .container
-  //-     .blog-list
-  //-       +blogItem("img/blog1/post-1.jpg", "The master bedroom suite is spaci of ", "16 June, 2018", "22", "36", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.")
-  //-       +blogItem("img/blog1/post-2.jpg", "The master bedroom suite is spaci of ", "16 June, 2018", "22", "36", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.")
-  //-       +blogItem("img/blog1/post-3.jpg", "The master bedroom suite is spaci of ", "16 June, 2018", "22", "36", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.")
-  //-       +blogItem("img/blog1/post-4.jpg", "The master bedroom suite is spaci of ", "16 June, 2018", "22", "36", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.")
-  //-       +blogItem("img/blog1/post-5.jpg", "The master bedroom suite is spaci of ", "16 June, 2018", "22", "36", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.")
-  //-       .blog-pagination
-  //-         a(href="#").blog-pagination__btn.blog-pagination__btn_active 1
-  //-         a(href="#").blog-pagination__btn 2
-  //-         a(href="#").blog-pagination__btn 3
-  //-         a(href="#").blog-pagination__btn 4
-  //-         a(href="#").blog-pagination__btn.blog-pagination__arrow
-  //-           .blog-pagination__btn_next
-  //-     include ../../components/blog-sidebar/blog-sidebar
+  .menu
+    .container.menu-container
+      .logo
+        img(src="img/index/logo.svg", alt="Logo")
+      nav.nav
+        a.link.nav-link(href="#") Бронирование
+        a.link.nav-link(href="#") Номерной фонд
+        a.link.nav-link(href="#") Об эко-комплексе
+        a.link.nav-link(href="#") Рестораны
+        a.link.nav-link(href="#") Контакты
+  .main
+    .container.container-grid.main-container
+      .main-menu
+        button.link.subtitle.main-menu__link Зимний отдых
+          .main-menu__link__line
+        button.link.subtitle.main-menu__link Санаторий
+          .main-menu__link__line
+        button.link.subtitle.main-menu__link Туризм и активный отдых
+          .main-menu__link__line
+        button.link.subtitle.main-menu__link Летний лагерь
+          .main-menu__link__line
+        button.link.subtitle.main-menu__link Конгресс-услуги
+          .main-menu__link__line
+      .main-info
+        .main-info__item
+          .info-icon(style="background-image: url(\"img/icons/termometer.svg\")")
+            //- img(src="img/icons/termometer.svg", alt="Termometer")
+          .info-text -17&deg;
+        .main-info__item
+          .info-icon(style="background-image: url(\"img/icons/wind.svg\")")
+            //- img(src="img/icons/wind.svg", alt="Wind")
+          .info-text 3 м/с
+        .main-info__item
+          .info-icon(style="background-image: url(\"img/icons/camera.svg\")")
+            //- img(src="img/icons/camera.svg", alt="Camera")
+          .info-text смотреть камеры
+      .main-images
+        .main-image
+          .main-image__img
+            img(src="img/index/main.jpg", alt="Image")
+          .main-image__linkbox
+            a.main-image__link(href="#") Подробнее
+        .main-image
+          .main-image__img
+            img(src="img/index/main.jpg", alt="Image")
+          .main-image__linkbox
+            a.main-image__link(href="#") Подробнее
+        .main-image
+          .main-image__img
+            img(src="img/index/main.jpg", alt="Image")
+          .main-image__linkbox
+            a.main-image__link(href="#") Подробнее
+        .main-image
+          .main-image__img
+            img(src="img/index/main.jpg", alt="Image")
+          .main-image__linkbox
+            a.main-image__link(href="#") Подробнее
+        .main-image
+          .main-image__img
+            img(src="img/index/main.jpg", alt="Image")
+          .main-image__linkbox
+            a.main-image__link(href="#") Подробнее
+
+  section.news
+    .container
+      .news-title
+        h2.title Новости и акции
+        .news-nav
+          a.news-nav__item(href="#") все новости
+          a.news-nav__item(href="#") все новости и акции
+      .container-grid.news-container
