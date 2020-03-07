@@ -35,3 +35,16 @@ a
   font-size: 28px
   font-weight: bold
   line-height: 40px
+.btn
+  padding: 15px
+  background-color: $c-active
+  font-size: 18px
+  color: $c-font-light
+  transition: 0.2s
+  &:hover
+    background-color: $c-active-hover
+  &:active
+    background-color: $c-active-click
+  &[disabled]
+    background-color: $c-active-disabled
+    cursor: default
