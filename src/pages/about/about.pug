@@ -1,22 +1,91 @@
-//- extends ../base
+extends ../base
 
-//- include ../mixins
+block main
+  include ../../components/header/header
+  section.main
+    .container
+      h2.main-title Об эко-комплексе
+  .descr
+    .container.container-grid
+      .descr-text Всесезонный эко-комплекс — это целый год незабываемых впечатлений, здорового отдыха и красочных эмоций. Это горнолыжный курорт, wellness-центр, детский лагерь и потрясающие красоты
 
-//- block main
-//-   include ../../components/blog-main/blog-main
-//-   .blog
-//-     .container
-//-       .blog-list
-//-         +blogItem("img/blog1/post-1.jpg", "The master bedroom suite is spaci of ", "16 June, 2018", "22", "36", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.")
-//-         +blogItem("img/blog1/post-2.jpg", "The master bedroom suite is spaci of ", "16 June, 2018", "22", "36", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.")
-//-         +blogItem("img/blog1/post-3.jpg", "The master bedroom suite is spaci of ", "16 June, 2018", "22", "36", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.")
-//-         +blogItem("img/blog1/post-4.jpg", "The master bedroom suite is spaci of ", "16 June, 2018", "22", "36", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.")
-//-         +blogItem("img/blog1/post-5.jpg", "The master bedroom suite is spaci of ", "16 June, 2018", "22", "36", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.")
-//-         .blog-pagination
-//-           a(href="#").blog-pagination__btn.blog-pagination__btn_active 1
-//-           a(href="#").blog-pagination__btn 2
-//-           a(href="#").blog-pagination__btn 3
-//-           a(href="#").blog-pagination__btn 4
-//-           a(href="#").blog-pagination__btn.blog-pagination__arrow
-//-             .blog-pagination__btn_next
-//-       include ../../components/blog-sidebar/blog-sidebar
+  section.wellness
+    .container
+      h2.title Wellness-сезон
+      .wellness-slider
+        button.wellness-slider__arrow.wellness-slider__arrow_left
+        button.wellness-slider__arrow.wellness-slider__arrow_right
+        .wellness-slider__container
+          .wellness-slider__items
+            .wellness-slider__item
+              img(src="img/about/wellness-1.jpg", alt="Wellness image")
+            .wellness-slider__item
+              img(src="img/about/wellness-2.jpg", alt="Wellness image")
+            .wellness-slider__item
+              img(src="img/about/wellness-1.jpg", alt="Wellness image")
+            .wellness-slider__item
+              img(src="img/about/wellness-2.jpg", alt="Wellness image")
+            .wellness-slider__item
+              img(src="img/about/video.jpg", alt="Wellness image")
+
+  section.summer
+    .container
+      h2.title Летний сезон
+      p.text Самое подходящее время для десткого лагеря: активный отдых с заботой о здоровье, футбол, волейбол, танцы и всевозможные мастер-классы. Лето, которое ваш ребёнок захочет повторить.
+      .summer-video
+        img(src="img/about/video.jpg", alt="Video preview")
+        button.summer-video__btn
+          img(src="img/icons/video-btn.svg", alt="Play button")
+      p.text.summer-video__descr Здесь должна распологаться красивая подпись под видео
+
+  section.docs
+    .container
+      h2.title Правовые документы
+      p.text Продуманная система подъемников обеспечивает доступ туристов к исходным точкам всех горнолыжных трасс, снежное покрытие которых поддерживается специальными машинами — ратраками. Для удобства гостей комплекса действует единый СКИ-ПАСС.
+      .container-grid
+        .docs-items
+          a.docs-item(href="#")
+            .docs-item__icon
+              <svg width="46" height="62" viewBox="0 0 46 62" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="path-shadow" d="M40 7H0V62H40V7Z" fill="#F2F2F2"/><mask id="path-2-inside-1" fill="white"><path d="M46 13V55H6V0H33"/></mask><path d="M46 13V55H6V0H33" fill="white"/><path d="M47 13C47 12.4477 46.5523 12 46 12C45.4477 12 45 12.4477 45 13H47ZM46 55V56C46.5523 56 47 55.5523 47 55H46ZM6 55H5C5 55.5523 5.44772 56 6 56V55ZM6 0V-1C5.44772 -1 5 -0.552285 5 0L6 0ZM33 1C33.5523 1 34 0.552285 34 0C34 -0.552285 33.5523 -1 33 -1V1ZM45 13V55H47V13H45ZM46 54H6V56H46V54ZM7 55V0H5V55H7ZM6 1H33V-1H6V1Z" fill="#102A5E" fill-opacity="0.2" mask="url(#path-2-inside-1)"/><path d="M33 13H46L33 0V13Z" fill="white"/><path d="M33.5 1.20711L44.7929 12.5H33.5V1.20711Z" stroke="#102A5E" stroke-opacity="0.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            .docs-item__info
+              .text.docs-item__title Лицензия на осуществление медицинской деятельности №1
+              .docs-item__size pdf, 368 Кб
+          a.docs-item(href="#")
+            .docs-item__icon
+              <svg width="46" height="62" viewBox="0 0 46 62" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="path-shadow" d="M40 7H0V62H40V7Z" fill="#F2F2F2"/><mask id="path-2-inside-1" fill="white"><path d="M46 13V55H6V0H33"/></mask><path d="M46 13V55H6V0H33" fill="white"/><path d="M47 13C47 12.4477 46.5523 12 46 12C45.4477 12 45 12.4477 45 13H47ZM46 55V56C46.5523 56 47 55.5523 47 55H46ZM6 55H5C5 55.5523 5.44772 56 6 56V55ZM6 0V-1C5.44772 -1 5 -0.552285 5 0L6 0ZM33 1C33.5523 1 34 0.552285 34 0C34 -0.552285 33.5523 -1 33 -1V1ZM45 13V55H47V13H45ZM46 54H6V56H46V54ZM7 55V0H5V55H7ZM6 1H33V-1H6V1Z" fill="#102A5E" fill-opacity="0.2" mask="url(#path-2-inside-1)"/><path d="M33 13H46L33 0V13Z" fill="white"/><path d="M33.5 1.20711L44.7929 12.5H33.5V1.20711Z" stroke="#102A5E" stroke-opacity="0.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            .docs-item__info
+              .text.docs-item__title Лицензия на осуществление медицинской деятельности №2
+              .docs-item__size pdf, 256 Кб
+          a.docs-item(href="#")
+            .docs-item__icon
+              <svg width="46" height="62" viewBox="0 0 46 62" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="path-shadow" d="M40 7H0V62H40V7Z" fill="#F2F2F2"/><mask id="path-2-inside-1" fill="white"><path d="M46 13V55H6V0H33"/></mask><path d="M46 13V55H6V0H33" fill="white"/><path d="M47 13C47 12.4477 46.5523 12 46 12C45.4477 12 45 12.4477 45 13H47ZM46 55V56C46.5523 56 47 55.5523 47 55H46ZM6 55H5C5 55.5523 5.44772 56 6 56V55ZM6 0V-1C5.44772 -1 5 -0.552285 5 0L6 0ZM33 1C33.5523 1 34 0.552285 34 0C34 -0.552285 33.5523 -1 33 -1V1ZM45 13V55H47V13H45ZM46 54H6V56H46V54ZM7 55V0H5V55H7ZM6 1H33V-1H6V1Z" fill="#102A5E" fill-opacity="0.2" mask="url(#path-2-inside-1)"/><path d="M33 13H46L33 0V13Z" fill="white"/><path d="M33.5 1.20711L44.7929 12.5H33.5V1.20711Z" stroke="#102A5E" stroke-opacity="0.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            .docs-item__info
+              .text.docs-item__title Лицензия на осуществление медицинской деятельности №3
+              .docs-item__size pdf, 289 Кб
+          a.docs-item(href="#")
+            .docs-item__icon
+              <svg width="46" height="62" viewBox="0 0 46 62" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="path-shadow" d="M40 7H0V62H40V7Z" fill="#F2F2F2"/><mask id="path-2-inside-1" fill="white"><path d="M46 13V55H6V0H33"/></mask><path d="M46 13V55H6V0H33" fill="white"/><path d="M47 13C47 12.4477 46.5523 12 46 12C45.4477 12 45 12.4477 45 13H47ZM46 55V56C46.5523 56 47 55.5523 47 55H46ZM6 55H5C5 55.5523 5.44772 56 6 56V55ZM6 0V-1C5.44772 -1 5 -0.552285 5 0L6 0ZM33 1C33.5523 1 34 0.552285 34 0C34 -0.552285 33.5523 -1 33 -1V1ZM45 13V55H47V13H45ZM46 54H6V56H46V54ZM7 55V0H5V55H7ZM6 1H33V-1H6V1Z" fill="#102A5E" fill-opacity="0.2" mask="url(#path-2-inside-1)"/><path d="M33 13H46L33 0V13Z" fill="white"/><path d="M33.5 1.20711L44.7929 12.5H33.5V1.20711Z" stroke="#102A5E" stroke-opacity="0.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            .docs-item__info
+              .text.docs-item__title Пример письма на сайт
+              .docs-item__size pdf, 534 Кб
+
+  section.order
+    .container
+      h2.title Узнать подробности и заказать путевку
+      form.container-grid.order-form(action="#")
+        .order-input
+          input.order-input__input(type="text", placeholder="Ваше имя")
+          .order-input__error Проверьте введенные данные
+          .order-input__cross
+            img(src="img/icons/cross.svg", alt="Cross")
+        .order-input
+          input.order-input__input(type="text", placeholder="Телефон")
+          .order-input__error Проверьте введенные данные
+          .order-input__cross
+            img(src="img/icons/cross.svg", alt="Cross")
+        .order-input
+          input.order-input__input(type="text", placeholder="E-mail")
+          .order-input__error Проверьте введенные данные
+          .order-input__cross
+            img(src="img/icons/cross.svg", alt="Cross")
+        button.btn.order-btn(type="submit") Отправить заявку

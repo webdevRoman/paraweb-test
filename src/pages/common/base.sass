@@ -20,9 +20,15 @@ a
     grid-column-gap: 30px
 .logo
   &_square
+    display: block
     width: 105px
     height: 105px
     background-color: $c-bg-light
+  &_rectangle
+    display: block
+    width: 154px
+    height: 38px
+    background-color: darken($c-bg-middle, 18)
 .link
   transition: 0.2s
   &:hover
@@ -35,6 +41,9 @@ a
   font-size: 28px
   font-weight: bold
   line-height: 40px
+.text
+  font-size: 18px
+  line-height: 30px
 .btn
   padding: 15px
   background-color: $c-active
