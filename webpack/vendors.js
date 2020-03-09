@@ -7,7 +7,7 @@ module.exports = function() {
             name: 'vendors',
             test: /node_modules/,
             chunks: 'all',
-            enforce: true,
+            enforce: true
           },
           common: {
             name: 'common',

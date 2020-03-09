@@ -54,7 +54,12 @@ class Slider {
   }
 }
 
-const slider = new Slider(document.querySelector('.wellness-slider__items'), document.querySelectorAll('.wellness-slider__item'), 600, 30, document.querySelector('.wellness-slider__arrow_left'), document.querySelector('.wellness-slider__arrow_right'))
+const windowWidth = document.body.clientWidth
+const sliderItemWidth = windowWidth > 1200 ? 600 : windowWidth > 800 ? 360 : 200
+
+        /**      change slider item width for small displays        **/
+
+const slider = new Slider(document.querySelector('.wellness-slider__items'), document.querySelectorAll('.wellness-slider__item'), sliderItemWidth, 30, document.querySelector('.wellness-slider__arrow_left'), document.querySelector('.wellness-slider__arrow_right'))
 
 
 class OrderValidator {

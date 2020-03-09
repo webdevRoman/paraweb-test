@@ -1,0 +1,48 @@
+@media(max-width: 1200px)
+  .main
+    height: 360px
+    &-title
+      font-size: 50px
+  .descr
+    padding: 60px 0 30px 0
+    &-text
+      font-size: 26px
+      line-height: 32px
+
+  .wellness
+    padding: 60px 0
+    .title
+      margin-bottom: 120px
+    &-slider
+      width: 90%
+      margin: 0 auto
+      &__arrow
+        &_left
+          left: -30px
+        &_right
+          right: -30px
+      &__item
+        width: 360px
+        min-width: 360px
+        margin-right: 30px
+
+  .docs
+    padding: 60px 0
+    &-items
+      grid-column: span 12
+      grid-template-columns: repeat(12, 1fr)
+    &-item
+      grid-column: span 6
+
+  .order
+    padding: 50px 0 70px 0
+    .title
+      margin-bottom: 30px
+    &-input
+      &__input
+        padding: 10px
+        font-size: 14px
+        &::placeholder
+          font-size: 14px
+      &__cross
+        right: 10px

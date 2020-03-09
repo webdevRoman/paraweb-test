@@ -32,6 +32,7 @@
     align-self: center
     &__link
       position: relative
+      text-align: left
       margin-bottom: 10px
       &:last-child
         margin-bottom: 0
@@ -84,9 +85,7 @@
     z-index: 2
     opacity: 0
     transition: 0.2s
-    img
-      height: 100%
-      overflow: hidden
+    overflow: hidden
     &_active
       opacity: 1
     &__linkbox
@@ -148,11 +147,12 @@
       grid-column: 8/13
     &__img
       position: relative
-      max-height: 360px
+      height: 360px
       margin-bottom: 20px
-      img
-        height: 100%
-        width: auto
+      overflow: hidden
+      // img
+      //   height: 100%
+      //   width: auto
     &__category
       position: absolute
       top: 0
@@ -314,9 +314,6 @@
   &-img
     position: relative
     grid-column: span 8
-    img
-      height: 100%
-      overflow: hidden
     &__linkbox
       position: absolute
       bottom: 0
@@ -414,6 +411,9 @@
       .booking-input__value
         flex-grow: 1
         cursor: pointer
+    #booking-input-common
+      border: none
+      resize: none
   &-select
     &__items
       display: none
@@ -476,3 +476,5 @@
       margin: 0 10px
   &-btn
     grid-column: span 3
+
+@import "../media/media-index"

@@ -57,3 +57,26 @@ a
   &[disabled]
     background-color: $c-active-disabled
     cursor: default
+
+@media(max-width: 1300px)
+  .container
+    width: $w-l
+@media(max-width: 1200px)
+  .container
+    width: $w-m
+  .logo
+    &_square
+      width: 80px
+      height: 80px
+    &_rectangle
+      width: 100px
+      height: 30px
+  .title
+    font-size: 36px
+    line-height: 42px
+  .subtitle
+    font-size: 20px
+    line-height: 28px
+  .btn
+    padding: 10px 0
+    font-size: 16px

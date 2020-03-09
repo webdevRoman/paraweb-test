@@ -1,7 +1,7 @@
 @import "../../pages/common/vars"
 
 .notification
-  padding: 20px
+  padding: 20px 0
   background-color: $c-warning
   transition: 0.2s
   &-container
@@ -60,3 +60,11 @@
             stroke: $c-active
     svg path
       transition: 0.2s
+
+@media(max-width: 1200px)
+  .notification
+    padding: 10px 0
+    &-btn
+      padding: 8px 15px
+  .header
+    padding: 10px 0
