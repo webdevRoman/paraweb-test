@@ -70,3 +70,6 @@ bookingSubmit.addEventListener('click', (e) => {
     // bookingSubmit.disabled = true
   }
 })
+
+import { burger } from '../../components/burger/burger'
+burger()

@@ -1,5 +1,3 @@
-import './header-index.sass'
-
 export const hideNotification = () => {
   const notification = document.getElementById('header-notification')
   const notificationBtn = document.getElementById('header-notification-btn')
