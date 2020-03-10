@@ -20,7 +20,7 @@
         grid-row: 1/3
         &__link
           font-size: 22px
-          margin-bottom: 0
+          margin-bottom: 5px
       &-info
         grid-column: span 6
       &-images
@@ -68,7 +68,7 @@
           padding: 10px 15px 20px 15px
         &__title
           font-size: 20px
-          line-height: 26px
+          line-height: 30px
           margin-bottom: 10px
         &__price
           font-size: 16px
@@ -139,480 +139,318 @@
           margin: 0
 
 @media(max-width: 800px)
-  .notification, header, .menu, .main, .news, .rooms, .booking, .footer
-    display: none !important
-//   .menu
-//     padding: 50px 0
-//     &-container
-//       position: relative
-//     .logo
-//       position: absolute
-//       top: 0
-//       left: 0
-//       width: 120px
-//     .nav
-//       display: flex
-//       justify-content: flex-end
-//       align-items: center
-//       padding-top: 40px
-//       &-link
-//         font-size: 18px
-//         margin-left: 28px
-//         &:first-child
-//           margin-left: 0
-//   .main
-//     margin-bottom: 75px
-//     &-container
-//       max-height: 500px
-//       grid-template-rows: 1fr 2fr 1fr
-//       grid-row-gap: 30px
-//     &-menu
-//       grid-column: span 4
-//       grid-row: 2/3
-//       align-self: center
-//       &__link
-//         position: relative
-//         text-align: left
-//         margin-bottom: 10px
-//         &:last-child
-//           margin-bottom: 0
-//         &_active
-//           color: $c-active
-//           .main-menu__link__line
-//             display: block
-//           &:hover
-//             .main-menu__link__line:after
-//               transform: scaleX(0)
-//         &__line
-//           display: none
-//           position: absolute
-//           z-index: 5
-//           top: 50%
-//           transform: translateY(-50%)
-//           left: calc(100% + 25px)
-//           width: 225px
-//           height: 3px
-//           background-color: $c-active
-//           transform-origin: right center
-//           transition: 0.2s
-//           &:after
-//             position: absolute
-//             top: 0
-//             right: 0
-//             content: ''
-//             width: 160px
-//             height: 100%
-//             background-color: $c-font-dark
-//             transform-origin: right center
-//             transition: 0.2s
-//     &-info
-//       grid-column: span 4
-//       grid-row: 3/4
-//       align-self: end
-//       display: flex
-//       align-items: center
-//       &__item
-//         display: flex
-//         align-items: center
-//         margin-right: 30px
-//         &:last-child
-//           margin-right: 0
-//     &-images
-//       grid-column: span 8
-//       grid-row: 1/4
-//     &-image
-//       position: relative
-//       z-index: 2
-//       opacity: 0
-//       transition: 0.2s
-//       overflow: hidden
-//       &_active
-//         opacity: 1
-//       &__linkbox
-//         position: absolute
-//         bottom: 0
-//         right: 0
-//         width: 200px
-//         height: 75px
-//         background-color: $c-bg-light
-//       &__link
-//         position: absolute
-//         bottom: 10px
-//         right: 0
-//         font-size: 18px
-//         font-weight: bold
-//         color: $c-active
-//         transition: 0.2s
-//         &:hover
-//           color: darken($c-active, 10)
-//   .info
-//     &-icon
-//       width: 20px
-//       height: 20px
-//       background-position: center
-//       background-repeat: no-repeat
-//       background-size: contain
-//       margin-right: 5px
-//     &-text
-//       font-size: 14px
+  html body
+    .menu
+      display: none
+    .main
+      margin-bottom: 25px
+      &-container
+        display: grid
+        grid-template-areas: "link link link link link none" "image image image image image radio" "info info info info info info"
+        max-height: none
+        grid-template-columns: repeat(6, 1fr)
+        grid-template-rows: none
+        grid-auto-rows: minmax(min-content, max-content)
+        grid-row-gap: 20px
+        padding-bottom: 40px
+        border-bottom: 1px solid rgba($c-font-dark, 0.1)
+      &-menu
+        grid-area: link
+        &__link
+          display: none
+          margin-bottom: 0
+          &_active
+            display: block
+            color: $c-active
+          .main-menu__link__line
+            display: none
+            &:after
+              display: none
+          span
+            display: inline-block
+            width: 10px
+            height: 10px
+            border-top: 3px solid $c-active
+            border-right: 3px solid $c-active
+            transform: rotate(45deg)
+      &-info
+        grid-area: info
+        &__item
+          margin-right: 10px
+      &-images
+        grid-area: image
+        overflow: visible
+      &-image
+        overflow: visible
+        &__img
+          height: 205px
+          margin-left: -20px
+          margin-right: -20px
+          overflow: hidden
+        &__linkbox
+          position: absolute
+          bottom: 0
+          left: -20px
+          width: calc(100% + 40px)
+          height: 3px
+          background-color: $c-active
+          &:after
+            content: ''
+            display: block
+            position: absolute
+            bottom: 
+            right: 0
+            width: 55%
+            height: 100%
+            background-color: $c-font-dark
+        &__link
+          display: none
+      &-radios
+        grid-area: radio
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+      &-radio
+        position: relative
+        width: 20px
+        height: 20px
+        border: 1px solid rgba($c-font-dark, 0.4)
+        border-radius: 50%
+        margin-bottom: 15px
+        &:last-child
+          margin-bottom: 0
+        &:after
+          content: ''
+          display: none
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translateX(-50%) translateY(-50%)
+          width: 8px
+          height: 8px
+          background-color: $c-active
+          border-radius: 50%
+        &_active
+          border: 1px solid $c-active
+          &:after
+            display: block
+    .info
+      grid-area: info
+      &-icon
+        width: 20px
+        height: 20px
+        background-position: center
+        background-repeat: no-repeat
+        background-size: contain
+        margin-right: 5px
+      &-text
+        font-size: 14px
 
-//   .news
-//     margin-bottom: 115px
-//     &-title
-//       display: flex
-//       justify-content: space-between
-//       align-items: center
-//       margin-bottom: 55px
-//     &-nav
-//       &__item
-//         font-size: 18px
-//         color: $c-active
-//         margin-left: 35px
-//         transition: 0.2s
-//         &:first-child
-//           margin-left: 0
-//         &:hover
-//           color: darken($c-active, 10)
-//     &-container
-//       grid-template-rows: repeat(2, 1fr)
-//       grid-row-gap: 80px
-//     &-item
-//       &:first-child
-//         grid-column: 1/6
-//       &:nth-child(2)
-//         grid-column: 7/14
-//       &:nth-child(3)
-//         grid-column: 2/7
-//       &:last-child
-//         grid-column: 8/13
-//       &__img
-//         position: relative
-//         height: 360px
-//         margin-bottom: 20px
-//         overflow: hidden
-//         // img
-//         //   height: 100%
-//         //   width: auto
-//       &__category
-//         position: absolute
-//         top: 0
-//         left: 0
-//         width: 100px
-//         height: 40px
-//         background-color: $c-bg-light
-//         display: flex
-//         justify-content: center
-//         align-items: center
-//         font-size: 10px
-//         font-weight: bold
-//         text-transform: uppercase
-//         letter-spacing: 1px
-//         &__sale
-//           background-color: $c-active
-//           color: $c-font-light
+    .news
+      margin-bottom: 40px
+      &-title
+        margin-bottom: 20px
+      &-nav
+        display: none
+      &-container
+        grid-template-rows: 1fr
+        grid-row-gap: 0
+      &-item
+        grid-column: span 12
+        display: none
+        opacity: 0
+        transition: 0.2s
+        margin-bottom: 20px
+        &:first-child
+          grid-column: span 12
+        &:nth-child(2)
+          grid-column: span 12
+        &:nth-child(3)
+          grid-column: span 12
+        &:last-child
+          grid-column: span 12
+        &_active
+          display: block
+          opacity: 1
+        &__img
+          height: auto
+          margin-bottom: 10px
+        &__category
+          width: 78px
+          height: 40px
+      &-slider
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 30px
+        &__pages
+          span
+            font-size: 16px
+        &__curpage
+          color: $c-active
+        &__arrows
+          display: flex
+          justify-content: flex-end
+          align-items: center
+        &__arrow
+          width: 12px
+          height: 12px
+          border-top: 2px solid $c-font-dark
+          border-right: 2px solid $c-font-dark
+          transition: 0.2s
+          &[disabled]
+            cursor: default
+            opacity: 0.5
+          &_left
+            transform: rotate(-135deg)
+          &_right
+            transform: rotate(45deg)
+          &__container
+            &:first-child
+              margin-right: 30px
+      &-buttons
+        display: block
+      &-btn
+        width: 100%
+        padding: 13px 90px
+        border: 1px solid rgba($c-font-dark, 0.2)
+        font-size: 16px
+        text-align: left
+        margin-bottom: 15px
+        &:last-child
+          margin-bottom: 0
 
-//   .rooms
-//     margin-bottom: 80px
-//     .title
-//       margin-bottom: 55px
-//     &-icons
-//       width: 800px
-//       display: flex
-//       justify-content: space-between
-//       align-items: flex-start
-//       margin-bottom: 50px
-//     &-icon
-//       width: 100px
-//       text-align: left
-//       &__img
-//         width: 100%
-//         height: 100px
-//         padding: 10px
-//         background-color: $c-icon-bg
-//         display: flex
-//         justify-content: center
-//         align-items: center
-//         margin-bottom: 10px
-//         transition: 0.2s
-//         svg g
-//           transition: 0.2s
-//       &__title
-//         font-size: 14px
-//         line-height: 20px
-//       &_active
-//         .rooms-icon__img
-//           background-color: $c-active
-//           svg
-//             g
-//               opacity: 1
-//             path
-//               fill: $c-bg-light
-//               stroke: $c-bg-light
-//         &:active
-//           div.rooms-icon__img
-//             background-color: $c-active
-//       &:hover
-//         .rooms-icon__img
-//           svg
-//             g
-//               opacity: 1
-//       &:active
-//         .rooms-icon__img
-//           background-color: $c-icon-bg-click
-//           svg
-//             g
-//               opacity: 1
-//     &-slider
-//       position: relative
-//       &__arrow
-//         position: absolute
-//         top: 50%
-//         transform: translateY(-50%)
-//         width: 22px
-//         height: 22px
-//         border-top: 2px solid $c-font-dark
-//         border-right: 2px solid $c-font-dark
-//         transition: 0.2s
-//         &[disabled]
-//           cursor: default
-//           opacity: 0.5
-//           &:hover
-//             border-top: 2px solid $c-font-dark
-//             border-right: 2px solid $c-font-dark
-//         &:hover
-//           border-top: 2px solid $c-active
-//           border-right: 2px solid $c-active
-//         &:active
-//           border-top: 2px solid $c-active-click
-//           border-right: 2px solid $c-active-click
-//         &_left
-//           left: -45px
-//           transform: rotate(-135deg)
-//         &_right
-//           right: -45px
-//           transform: rotate(45deg)
-//       .rooms-slider
-//         &__item
-//           display: none
-//           opacity: 0
-//           transition: 0.2s
-//           &_active
-//             display: grid
-//             opacity: 1
-//   .room
-//     &-info
-//       grid-column: span 4
-//       &__img
-//         height: 230px
-//         overflow: hidden
-//       &__descr
-//         padding: 15px 20px 30px 20px
-//         background-color: $c-bg-middle
-//         border: 1px solid rgba(0, 0, 0, 0.1)
-//       &__title
-//         font-size: 24px
-//         font-weight: bold
-//         line-height: 32px
-//         margin-bottom: 15px
-//       &__price
-//         font-size: 18px
-//         line-height: 30px
-//         opacity: 0.5
-//         margin-bottom: 15px
-//       &__icons
-//         padding: 15px 0 20px 0
-//         border-top: 1px solid rgba($c-bg-dark, 0.1)
-//         border-bottom: 1px solid rgba($c-bg-dark, 0.1)
-//         display: flex
-//         justify-content: flex-start
-//         align-items: center
-//         margin-bottom: 20px
-//       &__icon
-//         margin-right: 30px
-//         img
-//           width: 30px
-//         &_persons
-//           display: flex
-//           justify-content: center
-//           align-items: center
-//           font-size: 18px
-//           color: $c-active
-//           img
-//             width: 20px
-//             margin-right: 10px
-//       &__info
-//         display: flex
-//         justify-content: space-between
-//         align-items: center
-//       &__item
-//         flex-basis: 45%
-//         height: 30px
-//         display: flex
-//         align-items: center
-//         &:first-child
-//           border-right: 1px solid rgba($c-bg-dark, 0.1)
-//     &-img
-//       position: relative
-//       grid-column: span 8
-//       &__linkbox
-//         position: absolute
-//         bottom: 0
-//         right: 0
-//         width: 200px
-//         height: 75px
-//         background-color: $c-bg-light
-//       &__link
-//         position: absolute
-//         bottom: 10px
-//         right: 0
-//         font-size: 18px
-//         font-weight: bold
-//         color: $c-active
-//         transition: 0.2s
-//         &:hover
-//           color: darken($c-active, 10)
+    .rooms
+      margin-bottom: 40px
+      overflow: hidden
+      .title
+        margin-bottom: 30px
+      &-icons
+        width: auto
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        white-space: nowrap
+        overflow-x: scroll
+        margin-bottom: 30px
+      &-icon
+        width: auto
+        padding: 14px
+        background-color: $c-icon-bg
+        margin-right: 8px
+        transition: 0.2s
+        &:last-child
+          margin-right: 0
+        &__img
+          display: none
+        &_active
+          background-color: $c-active
+          color: $c-font-light
+      &-slider
+        &__arrow
+          display: none
+    .room
+      &-info
+        grid-column: span 6
+        &__img
+          height: 210px
+        &__descr
+          padding: 10px 20px 20px 20px
+        &__title
+          margin-bottom: 0
+        &__price
+          font-size: 14px
+          line-height: 20px
+          margin-bottom: 15px
+        &__icons
+          padding: 15px 0 20px 0
+          margin-bottom: 20px
+        &__icon
+          img
+            width: 30px
+          &_persons
+            font-size: 18px
+            img
+              width: 20px
+              margin-right: 10px
+        &__item
+          height: 30px
+      &-img
+        display: none
 
-//   .booking
-//     padding: 60px 0 80px 0
-//     background-color: $c-bg-middle
-//     .title
-//       margin-bottom: 40px
-//     &-input
-//       position: relative
-//       grid-column: span 3
-//       padding: 4px 15px
-//       background-color: $c-bg-light
-//       border: 1px solid $c-bg-light
-//       transition: 0.2s
-//       &__error
-//         display: none
-//         position: absolute
-//         top: calc(100% + 5px)
-//         left: 0
-//         font-size: 14px
-//         color: $c-warning
-//       &__cross
-//         display: none
-//         position: absolute
-//         top: 50%
-//         transform: translateY(-50%)
-//         right: 15px
-//         &_last
-//           top: 2px
-//           right: 5px
-//           transform: none
-//       &_error
-//         border: 1px solid $c-warning
-//         .booking-input__error
-//           display: block
-//         .booking-input__cross
-//           display: block
-//       &:hover
-//         border: 1px solid $c-active
-//       &:focus-within
-//         border: 1px solid $c-active
-//       &__label
-//         font-size: 14px
-//         opacity: 0.4
-//         margin-bottom: 3px
-//       &__icon
-//         flex-basis: 13px
-//         margin-right: 8px
-//       &__value
-//         font-size: 18px
-//       &__arrow
-//         flex-basis: 10px
-//         width: 10px
-//         min-width: 10px
-//         height: 10px
-//         border-top: 2px solid $c-active
-//         border-right: 2px solid $c-active
-//         transform: rotateZ(135deg)
-//         transition: 0.2s
-//       &_calendar
-//         .booking-input__data
-//           display: flex
-//           align-items: center
-//         .booking-input__value
-//           flex-grow: 1
-//       &_select
-//         position: relative
-//         &__container
-//           display: flex
-//           justify-content: space-between
-//           align-items: center
-//           cursor: pointer
-//         &_active
-//           border: 1px solid $c-active
-//           .booking-input__arrow
-//             transform: rotateZ(135deg) rotateY(180deg) rotateX(180deg)
-//         .booking-input__label
-//           cursor: pointer
-//         .booking-input__value
-//           flex-grow: 1
-//           cursor: pointer
-//       #booking-input-common
-//         border: none
-//         resize: none
-//     &-select
-//       &__items
-//         display: none
-//         position: absolute
-//         right: -1px
-//         left: -1px
-//         top: calc(100% + 1px)
-//         padding: 15px
-//         background-color: $c-bg-light
-//         border: 1px solid $c-active
-//         border-top: none
-//         opacity: 0
-//         transition: 0.2s
-//         &_active
-//           display: block
-//           opacity: 1
-//       &__item
-//         display: flex
-//         justify-content: space-between
-//         align-items: center
-//         padding-bottom: 15px
-//         border-bottom: 1px solid rgba($c-bg-dark, 0.2)
-//         margin-bottom: 15px
-//         &:last-child
-//           padding-bottom: 0
-//           border-bottom: none
-//           margin-bottom: 0
-//       &__name
-//         font-size: 18px
-//       &__buttons
-//         display: flex
-//         justify-content: flex-end
-//         align-items: center
-//       &__btn
-//         display: flex
-//         justify-content: center
-//         align-items: center
-//         width: 28px
-//         height: 28px
-//         border: 1px solid rgba($c-bg-dark, 0.2)
-//         border-radius: 50%
-//         font-family: 'Arial', sans-serif
-//         font-size: 18px
-//         transition: 0.2s
-//         &:hover
-//           border: 1px solid $c-active
-//           color: $c-active
-//         &:active
-//           border: 1px solid $c-active-click
-//           color: $c-active-click
-//         &[disabled]
-//           color: rgba($c-bg-dark, 0.2)
-//           &:hover
-//             border: 1px solid rgba($c-bg-dark, 0.2)
-//             color: rgba($c-bg-dark, 0.2)
-//       &__value
-//         width: 25px
-//         font-size: 18px
-//         text-align: center
-//         margin: 0 10px
-//     &-btn
-//       grid-column: span 3
+    .booking
+      padding: 40px 0
+      &-form
+        grid-auto-rows: minmax(min-content, max-content)
+        grid-row-gap: 15px
+      &-input
+        grid-column: span 3
+        padding: 4px 15px
+        &__error
+          top: calc(100% + 1px)
+          font-size: 10px
+        &__cross
+          right: 15px
+        &__icon
+          flex-basis: 13px
+          margin-right: 8px
+        &__value
+          font-size: 16px
+        &__arrow
+          flex-basis: 10px
+          width: 10px
+          min-width: 10px
+          height: 10px
+        &_calendar
+          display: none
+          &-s
+            display: block
+            grid-column: span 6
+        &_select
+          grid-column: span 6
+      &-calendar
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &__data
+          flex-basis: 46%
+          width: 46%
+          display: flex
+          justify-content: flex-start
+          align-items: center
+        &__separator
+          flex-basis: 23px
+          width: 23px
+          min-width: 23px
+        &__icon
+          flex-basis: 13px
+          margin-right: 3px
+      &-select
+        &__items
+          padding: 15px
+        &__item
+          padding-bottom: 15px
+          margin-bottom: 15px
+        &__name
+          font-size: 16px
+        &__btn
+          width: 28px
+          height: 28px
+          font-size: 16px
+          &:hover
+            border: 1px solid rgba($c-font-dark, 0.2)
+            color: $c-font-dark
+          &:active
+            border: 1px solid rgba($c-font-dark, 0.2)
+            color: $c-font-dark
+            &:hover
+              border: 1px solid rgba($c-font-dark, 0.2)
+              color: $c-font-dark
+        &__value
+          width: 25px
+          font-size: 16px
+          margin: 0 10px
+      &-btn
+        grid-column: span 6
+        margin-top: 15px

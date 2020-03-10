@@ -25,7 +25,7 @@
         position: relative
         width: 24px
         height: 2px
-        background-color: $c-bg-dark
+        background-color: $c-font-dark
         transition: 0.2s
         transform-origin: center center
         &:before
@@ -36,7 +36,7 @@
           display: block
           width: 24px
           height: 2px
-          background-color: $c-bg-dark
+          background-color: $c-font-dark
           transition: 0.2s
           transform-origin: right center
         &:after
@@ -47,7 +47,7 @@
           display: block
           width: 24px
           height: 2px
-          background-color: $c-bg-dark
+          background-color: $c-font-dark
           transition: 0.2s
           transform-origin: right center
       &_active
@@ -59,11 +59,13 @@
             transform: translateY(1px) rotate(45deg)
     &-body
       position: absolute
+      z-index: 10
       top: 100%
       left: 0
       right: 0
       min-height: calc(100vh - 60px)
-      border-top: 1px solid rgba($c-bg-dark, 0.1)
+      border-top: 1px solid rgba($c-font-dark, 0.1)
+      background-color: $c-bg-light
       display: none
       opacity: 0
       justify-content: space-between
@@ -78,10 +80,12 @@
         display: block
         width: 100%
         padding: 15px 0
-        border-bottom: 1px solid rgba($c-bg-dark, 0.1)
+        border-bottom: 1px solid rgba($c-font-dark, 0.1)
         font-size: 16px
         font-weight: bold
         line-height: 20px
+        &_active
+          color: $c-active
       &__additionals
         display: grid
         grid-template-columns: 1fr 1fr

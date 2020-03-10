@@ -12,7 +12,7 @@
     grid-template-columns: repeat(10, 1fr)
     grid-column-gap: 30px
     padding-bottom: 40px
-    border-bottom: 1px solid rgba($c-bg-light, 0.1)
+    border-bottom: 1px solid rgba($c-bg-middle, 0.1)
     &_bold
       grid-column: span 4
     &_thin
@@ -25,6 +25,7 @@
     &__item
       display: block
       font-size: 18px
+      line-height: 26px
       color: $c-font-light
       opacity: 0.5
       margin-bottom: 15px
@@ -38,9 +39,55 @@
         opacity: 1
 
 @media(max-width: 1200px)
-  .footer
-    padding: 50px 0 150px 0
-    &-menu
-      &__item
-        font-size: 16px
-        margin-bottom: 10px
+  html
+    .footer
+      padding: 50px 0 150px 0
+      &-menu
+        &__item
+          font-size: 16px
+          margin-bottom: 10px
+@media(max-width: 800px)
+  html body
+    .footer
+      padding: 35px 0 355px 0
+      &-logo
+        grid-column: span 6
+        margin-bottom: 38px
+      &-menu
+        grid-column: span 6
+        grid-template-columns: repeat(6, 1fr)
+        padding-bottom: 25px
+        &_bold
+          grid-column: span 6
+          display: grid
+          grid-template-columns: 1fr 1fr
+          grid-column-gap: 30px
+          grid-template-rows: repeat(3, 1fr)
+          grid-row-gap: 15px
+          grid-auto-flow: column
+          padding-bottom: 25px
+          border-bottom: 1px solid rgba($c-bg-middle, 0.1)
+          margin-bottom: 20px
+          .footer-menu__item_bold
+            margin-bottom: 0
+            &:hover
+              color: $c-font-light
+              opacity: 1
+        &_thin
+          grid-column: span 6
+          .footer-menu__item:hover
+            opacity: 0.5
+        &__item
+          font-size: 14px
+          line-height: 20px
+          margin-bottom: 15px
+          &:last-child
+            margin-bottom: 0
+          &:hover
+            color: $c-font-light
+            opacity: 0.5
+          &_bold
+            font-weight: bold
+            opacity: 1
+            &:nth-child(2)
+              grid-row: span 2

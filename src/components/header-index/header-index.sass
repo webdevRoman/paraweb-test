@@ -19,7 +19,6 @@
     transition: 0.2s
     &:hover
       border: 1px solid darken($c-bg-light, 20)
-      font-size: 16px
       color: darken($c-bg-light, 20)
 .header
   padding: 14px 0
@@ -62,9 +61,22 @@
       transition: 0.2s
 
 @media(max-width: 1200px)
-  .notification
-    padding: 10px 0
-    &-btn
-      padding: 8px 15px
-  .header
-    padding: 10px 0
+  html
+    .notification
+      padding: 10px 0
+      &-btn
+        padding: 8px 15px
+    .header
+      padding: 10px 0
+@media(max-width: 800px)
+  html body
+    .notification
+      &-text
+        font-size: 14px
+      &-btn
+        font-size: 14px
+        &:hover
+          border: 1px solid $c-bg-light
+          color: $c-font-light
+    .header
+      display: none

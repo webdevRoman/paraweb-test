@@ -32,35 +32,52 @@ class Slider {
     } else {
       this.btnLeft.disabled = false
     }
-    if (this.currentItem == this.items.length - 2) {
-      this.btnRight.disabled = true
+    if (document.body.clientWidth <= 800) {
+      if (this.currentItem == this.items.length - 1) {
+        this.btnRight.disabled = true
+      } else {
+        this.btnRight.disabled = false
+      }
     } else {
-      this.btnRight.disabled = false
+      if (this.currentItem == this.items.length - 2) {
+        this.btnRight.disabled = true
+      } else {
+        this.btnRight.disabled = false
+      }
     }
   }
-  slideLeft() {  
+  slideLeft() {
     this.container.style.marginLeft = parseInt(this.container.style.marginLeft) - this.itemWidth - this.gapWidth + 'px'
     this.currentItem++
-    if (this.currentItem == 0) {
-      this.btnLeft.disabled = true
+    if (document.body.clientWidth <= 800) {
+      if (this.currentItem == 0) {
+        this.btnLeft.disabled = true
+      } else {
+        this.btnLeft.disabled = false
+      }
+      if (this.currentItem == this.items.length - 1) {
+        this.btnRight.disabled = true
+      } else {
+        this.btnRight.disabled = false
+      }
     } else {
-      this.btnLeft.disabled = false
-    }
-    if (this.currentItem == this.items.length - 2) {
-      this.btnRight.disabled = true
-    } else {
-      this.btnRight.disabled = false
+      if (this.currentItem == 0) {
+        this.btnLeft.disabled = true
+      } else {
+        this.btnLeft.disabled = false
+      }
+      if (this.currentItem == this.items.length - 2) {
+        this.btnRight.disabled = true
+      } else {
+        this.btnRight.disabled = false
+      }
     }
   }
 }
 
 const windowWidth = document.body.clientWidth
-const sliderItemWidth = windowWidth > 1200 ? 600 : windowWidth > 800 ? 360 : 200
-
-        /**      change slider item width for small displays        **/
-
+const sliderItemWidth = windowWidth > 1300 ? 600 : windowWidth > 1200 ? 480 : windowWidth > 800 ? 360 : 335
 const slider = new Slider(document.querySelector('.wellness-slider__items'), document.querySelectorAll('.wellness-slider__item'), sliderItemWidth, 30, document.querySelector('.wellness-slider__arrow_left'), document.querySelector('.wellness-slider__arrow_right'))
-
 
 class OrderValidator {
   constructor(inputsClass, btnClass, errorClass) {
@@ -108,3 +125,6 @@ class OrderValidator {
   }
 }
 const orderValidator = new OrderValidator('.order-input', '.order-btn', 'order-input_error')
+
+import { burger } from '../../components/burger/burger'
+burger()
