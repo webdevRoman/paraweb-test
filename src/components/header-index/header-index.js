@@ -8,6 +8,6 @@ export const hideNotification = () => {
     notification.style.marginTop = `-${notificationHeight}px`
     setTimeout(() => {
       notification.style.display = 'none'
-    }, 500)
+    }, 300)
   })
 }

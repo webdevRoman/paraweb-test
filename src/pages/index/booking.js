@@ -4,6 +4,7 @@ export class Booking {
   constructor() {
     this.adultsNumber = 0
     this.childrenNumber = 0
+    this.bookingFunc()
   }
   bookingFunc() {
     const bookingInput = document.querySelector('.booking-input_select')
@@ -31,7 +32,6 @@ export class Booking {
         bookingInput.classList.add('booking-input_select_active')
       }
     })
-
 
     this.adultsNumber = 0
     this.childrenNumber = 0

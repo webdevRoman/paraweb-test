@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackTagsPlugin = require('html-webpack-tags-plugin');
 const merge = require('webpack-merge');
 const pug = require('./webpack/pug');
 const devserver = require('./webpack/devserver');
@@ -31,12 +32,18 @@ const common = merge([
       new HtmlWebpackPlugin({
         filename: 'index.html',
         chunks: ['index'],
-        template: PATHS.src + '/pages/index/index.pug'
+        template: PATHS.src + '/pages/index/index.pug',
+        favicon: PATHS.src + '/assets/favicon.ico'
       }),
       new HtmlWebpackPlugin({
         filename: 'about.html',
         chunks: ['about'],
-        template: PATHS.src + '/pages/about/about.pug'
+        template: PATHS.src + '/pages/about/about.pug',
+        favicon: PATHS.src + '/assets/favicon.ico'
+      }),
+      new HtmlWebpackTagsPlugin({
+        tags: ['js/vendors.js', 'js/common.js', './css/common.css'],
+        append: false
       }),
       new CopyWebpackPlugin([
         { from: `${PATHS.src}/img`, to: `${PATHS.build}/img` }
